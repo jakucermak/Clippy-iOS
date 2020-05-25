@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClipBoardContent" rowHeight="70" id="8QP-r1-AcQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClipBoardContent" rowHeight="70" id="8QP-r1-AcQ" customClass="ClipBoardCell" customModule="Clippy_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8QP-r1-AcQ" id="ORf-S9-uPz">
@@ -48,9 +48,17 @@
                                         <constraint firstItem="hJm-aT-0yy" firstAttribute="top" secondItem="ORf-S9-uPz" secondAttribute="topMargin" id="u5W-JD-nfP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="clipboardContent" destination="hJm-aT-0yy" id="L0u-gb-fej"/>
+                                    <outlet property="clipboardTypeImage" destination="XQf-GV-wc0" id="BDA-Nn-c3I"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="SlO-rO-Yvq"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="Ns6-P5-W3q"/>
+                        </connections>
                     </tableView>
                     <toolbarItems>
                         <barButtonItem systemItem="search" id="6sX-ef-mLW"/>

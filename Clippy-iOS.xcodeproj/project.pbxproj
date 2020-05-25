@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B45E350247BC00500C417BC /* PasteBoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45E34F247BC00500C417BC /* PasteBoardItem.swift */; };
 		3B793CC9247721CB002751BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B793CC8247721CB002751BE /* AppDelegate.swift */; };
 		3B793CCB247721CB002751BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B793CCA247721CB002751BE /* SceneDelegate.swift */; };
-		3B793CCD247721CB002751BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B793CCC247721CB002751BE /* ViewController.swift */; };
+		3B793CCD247721CB002751BE /* ClippyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B793CCC247721CB002751BE /* ClippyViewController.swift */; };
 		3B793CD2247721CD002751BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CD1247721CD002751BE /* Assets.xcassets */; };
 		3B793CD5247721CD002751BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CD3247721CD002751BE /* LaunchScreen.storyboard */; };
 		3B793CDD247721EB002751BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CDC247721EB002751BE /* Main.storyboard */; };
+		537F915C8626EB2D799D8F35 /* Pods_Clippy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B45E34F247BC00500C417BC /* PasteBoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteBoardItem.swift; sourceTree = "<group>"; };
 		3B793CC5247721CB002751BE /* Clippy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clippy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B793CC8247721CB002751BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B793CCA247721CB002751BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B793CCC247721CB002751BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B793CCC247721CB002751BE /* ClippyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippyViewController.swift; sourceTree = "<group>"; };
 		3B793CD1247721CD002751BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B793CD4247721CD002751BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B793CD6247721CD002751BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B793CDC247721EB002751BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clippy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537F915C8626EB2D799D8F35 /* Pods_Clippy_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17EEE9DF9E6EA12DBDB1577E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */,
+				5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2A0E213622DE2C4077CBEBE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B793CBC247721CB002751BE = {
 			isa = PBXGroup;
 			children = (
 				3B793CC7247721CB002751BE /* Clippy-iOS */,
 				3B793CC6247721CB002751BE /* Products */,
+				17EEE9DF9E6EA12DBDB1577E /* Pods */,
+				2A0E213622DE2C4077CBEBE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +84,12 @@
 			children = (
 				3B793CC8247721CB002751BE /* AppDelegate.swift */,
 				3B793CCA247721CB002751BE /* SceneDelegate.swift */,
-				3B793CCC247721CB002751BE /* ViewController.swift */,
+				3B793CCC247721CB002751BE /* ClippyViewController.swift */,
 				3B793CD1247721CD002751BE /* Assets.xcassets */,
 				3B793CDC247721EB002751BE /* Main.storyboard */,
 				3B793CD3247721CD002751BE /* LaunchScreen.storyboard */,
 				3B793CD6247721CD002751BE /* Info.plist */,
+				3B45E34F247BC00500C417BC /* PasteBoardItem.swift */,
 			);
 			path = "Clippy-iOS";
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B793CD9247721CD002751BE /* Build configuration list for PBXNativeTarget "Clippy-iOS" */;
 			buildPhases = (
+				873B06120A9D58052B092054 /* [CP] Check Pods Manifest.lock */,
 				3B793CC1247721CB002751BE /* Sources */,
 				3B793CC2247721CB002751BE /* Frameworks */,
 				3B793CC3247721CB002751BE /* Resources */,
+				F274061AE14F6747D9965662 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +162,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		873B06120A9D58052B092054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clippy-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F274061AE14F6747D9965662 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B793CC1247721CB002751BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B793CCD247721CB002751BE /* ViewController.swift in Sources */,
+				3B793CCD247721CB002751BE /* ClippyViewController.swift in Sources */,
 				3B793CC9247721CB002751BE /* AppDelegate.swift in Sources */,
 				3B793CCB247721CB002751BE /* SceneDelegate.swift in Sources */,
+				3B45E350247BC00500C417BC /* PasteBoardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +346,7 @@
 		};
 		3B793CDA247721CD002751BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +365,7 @@
 		};
 		3B793CDB247721CD002751BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

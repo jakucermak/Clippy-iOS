@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
+import RxSwift
 
 
 
 class ClipBoardCell: UITableViewCell{
     
-    @IBOutlet weak var clipboardContent: UILabel!
+    
+@IBOutlet weak var clipboardContent: UILabel!
     @IBOutlet weak var clipboardTypeImage: UIImageView!
     
     
@@ -23,7 +26,8 @@ class ClipBoardCell: UITableViewCell{
 class ClippyViewController: UITableViewController {
    
     let pasteboard = UIPasteboard.general
-    
+    var realm = try! Realm()
+    let pasteboardItem = PasteBoardItem()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -31,11 +35,6 @@ class ClippyViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClipBoardContent", for: indexPath) as! ClipBoardCell
-        
-        if let paste = pasteboard.string {
-            cell.clipboardContent.text = paste
-            cell.clipboardTypeImage.image = UIImage(systemName: "text.quote")
-        }
        
         return cell
     }
@@ -48,9 +47,12 @@ class ClippyViewController: UITableViewController {
         
         tableView.reloadData()
         tableView.rowHeight = 100
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         
     }
 
+    
 
 }
 
