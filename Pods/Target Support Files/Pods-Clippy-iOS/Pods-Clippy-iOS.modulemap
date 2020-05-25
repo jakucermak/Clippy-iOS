@@ -1,0 +1,6 @@
+framework module Pods_Clippy_iOS {
+  umbrella header "Pods-Clippy-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
