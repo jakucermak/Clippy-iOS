@@ -12,7 +12,7 @@ import RealmSwift
 
 class PasteBoardItem: Object{
     @objc dynamic var content: String!
-    @objc dynamic var dateCreated: NSDate!
+    @objc dynamic var dateCreated: Date!
     
     
 }

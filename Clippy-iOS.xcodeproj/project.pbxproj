@@ -15,6 +15,7 @@
 		3B793CD5247721CD002751BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CD3247721CD002751BE /* LaunchScreen.storyboard */; };
 		3B793CDD247721EB002751BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CDC247721EB002751BE /* Main.storyboard */; };
 		537F915C8626EB2D799D8F35 /* Pods_Clippy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */; };
+		9296E6D024BDEACE0087E416 /* RealmLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296E6CF24BDEACE0087E416 /* RealmLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		3B793CDC247721EB002751BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clippy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9296E6CF24BDEACE0087E416 /* RealmLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLogic.swift; sourceTree = "<group>"; };
 		ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,14 +86,39 @@
 			children = (
 				3B793CC8247721CB002751BE /* AppDelegate.swift */,
 				3B793CCA247721CB002751BE /* SceneDelegate.swift */,
-				3B793CCC247721CB002751BE /* ClippyViewController.swift */,
 				3B793CD1247721CD002751BE /* Assets.xcassets */,
 				3B793CDC247721EB002751BE /* Main.storyboard */,
 				3B793CD3247721CD002751BE /* LaunchScreen.storyboard */,
 				3B793CD6247721CD002751BE /* Info.plist */,
-				3B45E34F247BC00500C417BC /* PasteBoardItem.swift */,
+				9296E6CE24BDEA9B0087E416 /* ViewModel */,
+				9296E6CD24BDEA830087E416 /* Model */,
+				9296E6CB24BDD56F0087E416 /* Data */,
 			);
 			path = "Clippy-iOS";
+			sourceTree = "<group>";
+		};
+		9296E6CB24BDD56F0087E416 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B45E34F247BC00500C417BC /* PasteBoardItem.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9296E6CD24BDEA830087E416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9296E6CF24BDEACE0087E416 /* RealmLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9296E6CE24BDEA9B0087E416 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B793CCC247721CB002751BE /* ClippyViewController.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +150,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Jakub Čermák";
 				TargetAttributes = {
 					3B793CC4247721CB002751BE = {
@@ -209,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9296E6D024BDEACE0087E416 /* RealmLogic.swift in Sources */,
 				3B793CCD247721CB002751BE /* ClippyViewController.swift in Sources */,
 				3B793CC9247721CB002751BE /* AppDelegate.swift in Sources */,
 				3B793CCB247721CB002751BE /* SceneDelegate.swift in Sources */,
@@ -256,6 +284,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -316,6 +345,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
