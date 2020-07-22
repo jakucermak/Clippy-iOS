@@ -9,60 +9,46 @@
 import UIKit
 import RealmSwift
 import RxSwift
+import RxCocoa
+import RxRealm
 
 
 
 class ClipBoardCell: UITableViewCell{
-
+    
     @IBOutlet weak var clipboardContent: UILabel!
     @IBOutlet weak var clipboardTypeImage: UIImageView!
-
+    
 }
 
 
-
-class ClippyViewController: UITableViewController {
+class ClippyViewController: ClippyLogic{
     
-    let pasteboard = UIPasteboard.general
-    let realm = try! Realm()
-    var pasteboardItems: Results<PasteBoardItem>?
-    let realmLogic = RealmLogic()
+    @IBOutlet var tableView: UITableView!
+  
    
+    fileprivate var pasteboardItems: Results<PasteBoardItem>?
     
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return pasteboardItems?.count ?? 0
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClipBoardContent", for: indexPath) as! ClipBoardCell
-        cell.clipboardContent.text = pasteboardItems?[indexPath.row].content
-        
-        return cell
-    }
-    
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        let item = PasteBoardItem()
-        item.content = pasteboard.string
-        item.dateCreated = Date()
-        realmLogic.save(pasteBoardItem: item)
-        tableView.rowHeight = 100
-        loadItems()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
-        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+            
+        inputTableView(tableView: tableView)
+        copyToClip(tableView: tableView)
     }
     
-    func loadItems() {
-        pasteboardItems = realm.objects(PasteBoardItem.self)
-        tableView.reloadData()
+    
     }
+    
     
     
 
-}
+
+
+
+
+
+

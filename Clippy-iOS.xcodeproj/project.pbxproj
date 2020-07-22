@@ -15,7 +15,7 @@
 		3B793CD5247721CD002751BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CD3247721CD002751BE /* LaunchScreen.storyboard */; };
 		3B793CDD247721EB002751BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CDC247721EB002751BE /* Main.storyboard */; };
 		537F915C8626EB2D799D8F35 /* Pods_Clippy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */; };
-		9296E6D024BDEACE0087E416 /* RealmLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296E6CF24BDEACE0087E416 /* RealmLogic.swift */; };
+		9296E6D024BDEACE0087E416 /* ClippyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296E6CF24BDEACE0087E416 /* ClippyLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		3B793CDC247721EB002751BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clippy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		9296E6CF24BDEACE0087E416 /* RealmLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLogic.swift; sourceTree = "<group>"; };
+		9296E6CF24BDEACE0087E416 /* ClippyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippyLogic.swift; sourceTree = "<group>"; };
 		ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 		9296E6CD24BDEA830087E416 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9296E6CF24BDEACE0087E416 /* RealmLogic.swift */,
+				9296E6CF24BDEACE0087E416 /* ClippyLogic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 				3B793CC1247721CB002751BE /* Sources */,
 				3B793CC2247721CB002751BE /* Frameworks */,
 				3B793CC3247721CB002751BE /* Resources */,
-				F274061AE14F6747D9965662 /* [CP] Embed Pods Frameworks */,
+				AC4BF8C5CD0ABFC0A6B2C64F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +212,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F274061AE14F6747D9965662 /* [CP] Embed Pods Frameworks */ = {
+		AC4BF8C5CD0ABFC0A6B2C64F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9296E6D024BDEACE0087E416 /* RealmLogic.swift in Sources */,
+				9296E6D024BDEACE0087E416 /* ClippyLogic.swift in Sources */,
 				3B793CCD247721CB002751BE /* ClippyViewController.swift in Sources */,
 				3B793CC9247721CB002751BE /* AppDelegate.swift in Sources */,
 				3B793CCB247721CB002751BE /* SceneDelegate.swift in Sources */,
@@ -309,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,6 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z5D3ZTJQV;
 				INFOPLIST_FILE = "Clippy-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JakubCermak.Clippy-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -401,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z5D3ZTJQV;
 				INFOPLIST_FILE = "Clippy-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JakubCermak.Clippy-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
