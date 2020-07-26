@@ -8,14 +8,13 @@
 
 import UIKit
 import RealmSwift
-import RxSwift
-import RxRealm
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     let realm = try! Realm()
-    let disposeBag = DisposeBag()
+
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -64,24 +63,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     @objc func clipBChanged(){
-        let pasteboard = UIPasteboard.general
+       
         let newItem = PasteBoardItem()
         
         
-        if pasteboard.hasStrings{
-            newItem.type = "text"
+        if let pasteboard = UIPasteboard.general.string {
+            let predicate = NSPredicate(format: "content = %@", pasteboard)
+            let objects = realm.objects(PasteBoardItem.self).filter(predicate)
+            if objects.count == 0{
+                newItem.content = pasteboard
+                newItem.dateCreated = Date()
+                newItem.type = "text"
+                do{
+                try realm.write{
+                    realm.add(newItem)
+                }
+                }catch {
+                        print("Error initializing DB")
+                    }
+            }else{
+                print("is in DB")
+            }
         }
         
-        if pasteboard.hasImages{
-            newItem.type = "images"
+           
+        
+        
+        
         }
      
-        newItem.content = pasteboard.string ?? "nothing in pasteboard"
-        
-        Observable.from(object: newItem)
-            .subscribe(Realm.rx.add())
-            .disposed(by: disposeBag)
-        
     }
-}
+
 

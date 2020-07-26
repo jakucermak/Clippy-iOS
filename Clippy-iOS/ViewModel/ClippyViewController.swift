@@ -22,13 +22,14 @@ class ClipBoardCell: UITableViewCell{
 }
 
 
-class ClippyViewController: ClippyLogic{
+class ClippyViewController:UIViewController{
     
     @IBOutlet var tableView: UITableView!
   
    
     fileprivate var pasteboardItems: Results<PasteBoardItem>?
-    
+    var clippyLogic = ClippyLogic()
+    let disposeBag = DisposeBag()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +37,12 @@ class ClippyViewController: ClippyLogic{
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
             
-        inputTableView(tableView: tableView)
-        copyToClip(tableView: tableView)
+        clippyLogic.inputTableView(tableView: tableView)
+        clippyLogic.copyToClip(tableView: tableView)
+
     }
+    
+    
     
     
     }

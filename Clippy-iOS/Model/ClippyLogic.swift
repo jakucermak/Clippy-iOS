@@ -11,7 +11,7 @@ import RxRealm
 import RxSwift
 import RealmSwift
 
-class ClippyLogic: UIViewController {
+class ClippyLogic {
     
     let disposeBag = DisposeBag()
     let realm = try! Realm()
@@ -31,14 +31,18 @@ class ClippyLogic: UIViewController {
     
     func copyToClip(tableView: UITableView){
         tableView.rx.itemSelected
-            .subscribe(onNext: {[weak self] indexPath in
+            .subscribe(onNext: { indexPath in
                 let pasteboard = UIPasteboard.general
                 let cell = tableView.cellForRow(at: indexPath) as! ClipBoardCell
                 pasteboard.string = cell.clipboardContent.text
+                
             }).disposed(by: disposeBag)
     }
     
     
     
+    }
     
-}
+    
+    
+
