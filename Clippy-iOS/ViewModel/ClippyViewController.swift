@@ -11,36 +11,36 @@ import RealmSwift
 import RxSwift
 import RxCocoa
 import RxRealm
+import SwipeCellKit
 
 
-
-class ClipBoardCell: UITableViewCell{
+class ClippyViewController:UIViewController {
     
-    @IBOutlet weak var clipboardContent: UILabel!
-    @IBOutlet weak var clipboardTypeImage: UIImageView!
     
-}
-
-
-class ClippyViewController:UIViewController{
     
     @IBOutlet var tableView: UITableView!
   
    
-    fileprivate var pasteboardItems: Results<PasteBoardItem>?
     var clippyLogic = ClippyLogic()
     let disposeBag = DisposeBag()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.register(ImageTableViewCell.nib(), forCellReuseIdentifier: ImageTableViewCell.identifier)
+        tableView.register(StringTableViewCell.nib(), forCellReuseIdentifier: StringTableViewCell.identifier)
+     
         tableView.tableFooterView = UIView()
+     
             
         clippyLogic.inputTableView(tableView: tableView)
-        clippyLogic.copyToClip(tableView: tableView)
-
+        clippyLogic.copyString(tableView: tableView)
+        clippyLogic.copyImage(tableView: tableView)
+        
+       
     }
+
     
     
     

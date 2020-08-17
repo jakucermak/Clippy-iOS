@@ -15,6 +15,10 @@
 		3B793CD5247721CD002751BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CD3247721CD002751BE /* LaunchScreen.storyboard */; };
 		3B793CDD247721EB002751BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B793CDC247721EB002751BE /* Main.storyboard */; };
 		537F915C8626EB2D799D8F35 /* Pods_Clippy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */; };
+		921D230724D973C50009F8A5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D230524D973C50009F8A5 /* ImageTableViewCell.swift */; };
+		921D230824D973C50009F8A5 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921D230624D973C50009F8A5 /* ImageTableViewCell.xib */; };
+		928B1A4724D9872200E7D5E5 /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B1A4524D9872200E7D5E5 /* StringTableViewCell.swift */; };
+		928B1A4824D9872200E7D5E5 /* StringTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928B1A4624D9872200E7D5E5 /* StringTableViewCell.xib */; };
 		9296E6D024BDEACE0087E416 /* ClippyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296E6CF24BDEACE0087E416 /* ClippyLogic.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		3B793CDC247721EB002751BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5599745BA23DF533FC07C158 /* Pods_Clippy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clippy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBD6FFC231E60097BEB3837 /* Pods-Clippy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		921D230524D973C50009F8A5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		921D230624D973C50009F8A5 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ImageTableViewCell.xib; path = ../ImageTableViewCell.xib; sourceTree = "<group>"; };
+		928B1A4524D9872200E7D5E5 /* StringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTableViewCell.swift; sourceTree = "<group>"; };
+		928B1A4624D9872200E7D5E5 /* StringTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringTableViewCell.xib; sourceTree = "<group>"; };
 		9296E6CF24BDEACE0087E416 /* ClippyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippyLogic.swift; sourceTree = "<group>"; };
 		ED7FAEA2743B2173896C9D72 /* Pods-Clippy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clippy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,14 +95,24 @@
 				3B793CC8247721CB002751BE /* AppDelegate.swift */,
 				3B793CCA247721CB002751BE /* SceneDelegate.swift */,
 				3B793CD1247721CD002751BE /* Assets.xcassets */,
-				3B793CDC247721EB002751BE /* Main.storyboard */,
-				3B793CD3247721CD002751BE /* LaunchScreen.storyboard */,
+				921D230324D972260009F8A5 /* View */,
 				3B793CD6247721CD002751BE /* Info.plist */,
 				9296E6CE24BDEA9B0087E416 /* ViewModel */,
 				9296E6CD24BDEA830087E416 /* Model */,
 				9296E6CB24BDD56F0087E416 /* Data */,
 			);
 			path = "Clippy-iOS";
+			sourceTree = "<group>";
+		};
+		921D230324D972260009F8A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B793CD3247721CD002751BE /* LaunchScreen.storyboard */,
+				3B793CDC247721EB002751BE /* Main.storyboard */,
+				921D230624D973C50009F8A5 /* ImageTableViewCell.xib */,
+				928B1A4624D9872200E7D5E5 /* StringTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9296E6CB24BDD56F0087E416 /* Data */ = {
@@ -117,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				3B793CCC247721CB002751BE /* ClippyViewController.swift */,
+				921D230524D973C50009F8A5 /* ImageTableViewCell.swift */,
+				928B1A4524D9872200E7D5E5 /* StringTableViewCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,7 +152,7 @@
 				3B793CC1247721CB002751BE /* Sources */,
 				3B793CC2247721CB002751BE /* Frameworks */,
 				3B793CC3247721CB002751BE /* Resources */,
-				AC4BF8C5CD0ABFC0A6B2C64F /* [CP] Embed Pods Frameworks */,
+				217478CF2E4C39CC22D42823 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B793CDD247721EB002751BE /* Main.storyboard in Resources */,
+				928B1A4824D9872200E7D5E5 /* StringTableViewCell.xib in Resources */,
+				921D230824D973C50009F8A5 /* ImageTableViewCell.xib in Resources */,
 				3B793CD5247721CD002751BE /* LaunchScreen.storyboard in Resources */,
 				3B793CD2247721CD002751BE /* Assets.xcassets in Resources */,
 			);
@@ -190,6 +212,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		217478CF2E4C39CC22D42823 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		873B06120A9D58052B092054 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,23 +251,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC4BF8C5CD0ABFC0A6B2C64F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clippy-iOS/Pods-Clippy-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9296E6D024BDEACE0087E416 /* ClippyLogic.swift in Sources */,
+				928B1A4724D9872200E7D5E5 /* StringTableViewCell.swift in Sources */,
 				3B793CCD247721CB002751BE /* ClippyViewController.swift in Sources */,
 				3B793CC9247721CB002751BE /* AppDelegate.swift in Sources */,
+				921D230724D973C50009F8A5 /* ImageTableViewCell.swift in Sources */,
 				3B793CCB247721CB002751BE /* SceneDelegate.swift in Sources */,
 				3B45E350247BC00500C417BC /* PasteBoardItem.swift in Sources */,
 			);

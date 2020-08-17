@@ -11,22 +11,16 @@ import RealmSwift
 
 
 class PasteBoardItem: Object{
-    @objc dynamic var content: String = ""
-    @objc dynamic var dateCreated = Date()
+    @objc dynamic var contentText: String = ""
+    @objc dynamic var contentImage: NSData?
+    @objc dynamic var dateCreated = NSDate()
     @objc dynamic var type: String = ""
-    @objc dynamic var typeImage: String {
-        switch type {
-        case "text":
-            return "text.alignleft"
-        case "image":
-            return "photo.fill"
-            
-        case "link":
-            return "link"
-        
-        default:
-           return "text"
-        }
+    @objc dynamic var id: Int = 0
+    var tags = List<String>()
+    
+    convenience init(tag:String){
+        self.init()
+        self.tags.append(tag)
     }
     
 }

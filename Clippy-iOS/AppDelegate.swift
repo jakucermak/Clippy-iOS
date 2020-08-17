@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import RealmSwift
-import RxSwift
-import RxRealm
+
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
    
